@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 특수문자 : Escape Sequence
+        let str1 = "우리나라는 \"민주주의\" 공화국이다.";
+        let str2 = "우리나라는 \n민주주의\n 공화국이다.";
+        let str3 = "우리나라는 \t민주주의\t 공화국이다.";
+
+        alert("우리나라는 \n민주주의\n 공화국이다.");
+
+        // 문자열 템플릿 백틱 `문자열`
+        // 변수 사용 가능
+        let a = 10;
+        let b = 20;
+
+        // result와 result2가 같은 결과이더라도 result는 +로 연결하는 반면, result2는 `를 사용하여 한번에 사용할 수 있다.
+        let result = a + " + " + b + " = " + (a+b) + " 이다."; // 10 + 20 = 30이다.
+        let result2 = `${a} + ${b} = ${a+b} 이다.`; // 10 + 20 = 30이다.
+
+        document.write(result, "<br>");
+        document.write(result2, "<br>");
+</script>
+</body>
+</html>
