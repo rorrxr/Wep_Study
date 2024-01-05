@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>DOM</title>
+</head>
+<html>
+<body>
+
+<h2>document.getElementsByTagName() 메서드</h2>
+
+<p>HTML5</p>
+<p>CSS3</p>
+<p>JavaScript</p>
+
+<p id="demo"></p>
+
+<script>
+const elements = document.getElementsByTagName("p"); // getElementsByTagName("태그 이름") -> p 태그에 있는 것을 순차적으로 저장
+
+document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + elements[0].innerHTML; //elements[0] -> HTML / elements[1] -> CSS3 / elements[2] -> JavaScript
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Continue문</title>
+</head>
+<body>
+    <h3>Continue문</h3>
+    <p>1~10 범위의 숫자 중 짝수만 출력에서 제외한다.</p>
+    <script>
+        for(let i = 0; i <= 10; i++){
+            if(i % 2 == 0){ //2의 배수만 제외하고 출력
+                continue; // break문처럼 for문을 종료하는 것이 아니라, i++ 코드로 제어가 진행된다
+            }
+            document.write(i + "<br>");
+        }
+    </script>
+</body>
+</html>

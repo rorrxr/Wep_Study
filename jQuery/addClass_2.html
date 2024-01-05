@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").addClass("important blue");
+  });
+});
+</script>
+<style>
+.important {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.blue {
+  color: blue;
+}
+</style>
+</head>
+<body>
+
+    <!-- jQuery CSS Classes -->
+
+    <div id = "div1">Jquery</div><br>
+    <div id = "div2">Jquery</div><br>
+
+    <button>스타일 적용</button>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기 함수정의</title>
+</head>
+<body>
+    <h3>계산기 함수정의</h3>
+    <script>
+        //3개의 매개변수를 갖는 함수.(첫번째 : 숫자, 두번째: 사칙연산자, 세번째:숫자)
+        function calculator(a, op, b) {
+            let result = 0;
+            switch(op) {
+                case "+": result = a + b;
+                    break;
+                case "-": result = a - b;
+                    break;
+                case "*": result = a * b;
+                    break;
+                case "/": result = a / b;
+                    break;                   
+            }
+
+            return result;
+        }
+
+        let result = calculator(10, "+", 20);
+        document.write(result);
+    </script>
+</body>
+</html>

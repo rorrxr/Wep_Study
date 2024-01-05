@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이벤트 리스너를 이용</title>
+</head>
+<body>
+
+<h2>이벤트리스너 사용</h2>
+<p>여러개 이벤트 등록</p>
+
+<p>현재 날짜와 시간 </p>
+<button type = "button" id = "btn_timeinfo1">현재 날짜/시간확인 1</button>
+<p id = "result"></p>
+
+<script>
+    // 일반 함수 사용
+    // 여러개의 함수를 이벤트를 통하여 사용이 가능
+    document.getElementById("btn_timeinfo1").addEventListener("mouseover", myMessage1);
+    document.getElementById("btn_timeinfo1").addEventListener("click", myMessage2);
+    document.getElementById("btn_timeinfo1").addEventListener("mouseout", myMessage3);
+
+    function myMessage1(){
+        document.getElementById("result").innerHTML += "마우스 오버<br>";
+    }
+    function myMessage2(){
+        document.getElementById("result").innerHTML += "마우스 클릭<br>";
+    }
+    function myMessage3(){
+        document.getElementById("result").innerHTML += "마우스 아웃<br>";
+    }
+
+</script>
+
+</body>
+</html> 

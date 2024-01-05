@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+function appendText() {
+    let course1 = "<p>CSS3</p>";        // Create text with HTML
+    let course2 = $("<p></p>").text("JavaScript");  // Create text with jQuery
+    let course3 = document.createElement("p");
+    course3.innerHTML = "jQuery.";         // Create text with DOM
+    $("body").append(course1, course2, course3);   // Append new elements
+}
+</script>
+</head>
+<body>
+
+<button onclick="appendText()">과정추가</button>
+<p>HTML5</p>
+
+</body>
+</html>

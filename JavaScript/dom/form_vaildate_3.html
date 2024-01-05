@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Vaildation - Form태그 유효성검사</title>
+    <script>
+        // 로그인 유효성 검사 함수
+        function sendit(){
+            // alert("유효성 검사");
+            let u_id = document.getElementById("u_id"); // 아이디
+            let u_pw = document.getElementById("u_pw"); // 비밀번호
+
+            if(u_id.value == ""){
+                alert("아이디를 입력하세요");
+                u_id.focus(); // u_id 위치로 돌아감
+                return; //onclick일 경우 false가 필요없다
+            }
+            if(u_pw.value == ""){
+                alert("비밀번호를 입력하세요");
+                u_pw.focus(); // u_pw 위치로 돌아감
+                return; //onclick일 경우 false가 필요없다
+            }
+            // return true; -> onclick일 경우 필요없다
+            document.getElementById("loginForm").submit();
+        }
+    </script>
+</head>
+<body>
+    
+    <h3>form 태그 유효성검사</h3>
+    <form name = "loginForm" action = "로그인검사를 할 서버측의 파일" method="post"> <!-- onsubmit은 type이 submit일 경우만 이벤트 작동-->
+        아이디 : <input type = "text" id = "u_id" name = "u_id" placeholder="아이디 입력"><br>
+        비밀번호 : <input type = "password" id = "u_pw" name = "u_pw" placeholder="비밀번호 입력"><br>
+        <input type = "button" value="로그인" onclick="sendit();"> <!-- type이 button일 경우에는 onclick으로 이벤트 명령어 사용 -->
+    </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaildation - input 태그 유효성 검사</title>
+    <script>
+        function vaildate(){
+            let num = document.getElementById("num"); // 아이디
+            //isNaN(값) : 값이 숫자가 아닐 경우 true를 반환
+            if(isNaN(num.value) || num.value < 1 || num.value > 10){ //1~10 범위 판별
+                alert("1~10 범위의 숫자를 입력하세요");
+                u_id.focus(); // u_id 위치로 돌아감
+                return; 
+            }
+            document.forms[0].submit(); // 문서 내 첫번째 form 태그를 참조하여, 해당 form 태그 정보를 전송.
+        }
+    </script>
+</head>
+<body>
+    <h3>input 태그 유효성검사</h3>
+    <form action = "서버 측에서 동작하는 파일" method="post">
+        숫자를 입력하세요 : <input type = "text" id = "num" placeholder="1~10 범위의 숫자만 입력하세요."><br>
+        <input type = "button" value = "정보체크" onclick="vaildate();">
+    </form>
+</body>
+</html>

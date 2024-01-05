@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+function appendText() {
+    //let txt = "<p>";        // Create text with HTML
+    let txt1 = $("#text").val();  // Create text with jQuery
+    //let txt3 = document.createElement("Spring");
+    //txt3.innerHTML = "Text.";         // Create text with DOM
+    $("body").append(txt1);   // Append new elements
+}
+</script>
+</head>
+<body>
+<!-- append 응용예제 : 텍스트 박스에 있는 내용을 버튼을 클릭하여 추가 -->
+<input type = "text" id = "text">
+<button onclick="appendText()">과정추가</button>
+<p>HTML5</p>
+
+</body>
+</html>

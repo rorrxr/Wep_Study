@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수정의(선언)</title>
+</head>
+<body>
+    <h3>함수정의(선언)</h3>
+    <script>
+        /*
+        document.write(1, "<br>");
+        document.write(2, "<br>");
+        document.write(3, "<br>");
+        document.write(4, "<br>");
+        document.write(5, "<br>");
+        */
+        //매개변수가 있는 함수정의(선언).  num : 매개변수, 인수, 파라미터 명칭
+        function fn_number_writer(num) {
+            document.write(num, "<br>");
+        }
+
+        //함수호출(실행)
+        fn_number_writer(1);
+        fn_number_writer(2);
+        fn_number_writer(3);
+        fn_number_writer(4);
+        fn_number_writer(5);
+
+        function fn_name_writer(name, age) {
+            document.write("안녕하세요," + name + " 입니다. 나이는? " + age, "<br>");
+        }
+
+        fn_name_writer("홍길동", 100);
+        fn_name_writer("박세리", 50);
+        fn_name_writer("손흥민", 35);
+        fn_name_writer("이순신", 25);
+        fn_name_writer("이강인", 20);
+
+        
+    </script>
+</body>
+</html>

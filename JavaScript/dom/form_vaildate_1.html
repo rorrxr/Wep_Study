@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Vaildation - Form태그 유효성검사</title>
+    <script>
+        // 로그인 유효성 검사 함수
+        function sendit(){
+            alert("유효성 검사");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h3>form 태그 유효성검사</h3>
+    <form name = "loginForm" action = "로그인검사를 할 서버측의 파일" method="post" onsubmit="return false;">
+        아이디 : <input type = "text" id = "u_id" name = "u_id" required placeholder="아이디 입력"><br> <!-- required 필수 입력 / placeholder : input type에 회색 글씨로 표시-->
+        비밀번호 : <input type = "password" id = "u_pw" name = "u_pw" required placeholder="비밀번호 입력"><br>
+        <input type = "submit" value="로그인">
+    </form>
+</body>
+</html>

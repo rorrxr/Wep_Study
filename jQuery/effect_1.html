@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                // $("p").hide();
+                // $("p").hide(1000);
+                $("p").hide(1000, function(){
+                    alert("화면에서 사라짐");
+                });
+            });
+            $("#show").click(function(){
+                // $("p").show();
+                // $("p").show(1000);
+                $("p").show(1000, function(){
+                    alert("화면에서 보여짐");
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>효과</h3>
+    <p>jQuery를 배우자</p>
+    <button id = "hide">숨기기</button>
+    <button id = "show">보이기</button>
+</body>
+</html>

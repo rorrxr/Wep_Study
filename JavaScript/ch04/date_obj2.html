@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 : Date</title>
+</head>
+<body>
+    <h3>내장객체 : Date</h3>
+    <script>
+        let now = new Date();
+
+        // 스프링에서 데이터베이스의 날짜 정보를 JSON으로 변환되어 보내질 때, 밀리세컨드단위로 처리가 된다.
+        let time = now.getTime();
+
+        let now2 = new Date(time);
+
+        //getTime() -> 1970년 1월 1일부터 경과된 시간을 밀리초로 표기함
+        document.write("1970년 1월 1일부터 현재까지 경과된 시간 : " + time + "<br>");
+        document.write("현재 날짜 : " + now2);
+    </script>
+</body>
+</html>

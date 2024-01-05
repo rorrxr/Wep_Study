@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>누적된 합을 구하는 예제</title>
+</head>
+<body>
+    <h3>누적된 합을 구하는 예제</h3>
+    <script>
+        function accumulate(n) {
+            let total = 0;
+
+            for(let i=1; i<=n; i++) {
+                total += i; // total = total + i;
+            }
+
+            return total;
+        }
+
+        document.write("1~5까지의 누적된 합? ", accumulate(5), "<br>");
+        document.write("1~10까지의 누적된 합? ", accumulate(10), "<br>");
+        document.write("1~50까지의 누적된 합? ", accumulate(50), "<br>");
+        document.write("1~100까지의 누적된 합? ", accumulate(100), "<br>");
+    </script>
+</body>
+</html>

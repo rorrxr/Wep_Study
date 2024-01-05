@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체 : Date 객체</title>
+</head>
+<body>
+    <h3>Date 객체</h3>
+    <p>날짜 정보와 관련된 기능</p>
+
+    <script>
+        // 현재 날짜와 시간 정보
+        let today = new Date();
+
+        // 월, 일, 요일
+        let nowMonth = today.getMonth(); // 월 0~11 범위로 값을 반환. 반환값에 + 1을 해야 
+        let nowDate = today.getDate(); // 일
+        let nowDay = today.getDay(); // 요일
+        
+        document.write("<h1>오늘의 날짜 정보</h1>");
+        document.write("현재 월 : " + nowMonth + "<br>"); // 현재 월 - 1
+        document.write("현재 일 : " + nowDate + "<br>");
+        document.write("현재 요일 : " + nowDay + "<br>"); // 일요일 ~ 토요일 (0~6)
+
+        // 특정 날짜와 시간을 지정하여 사용
+        // 월 부분은 0-11로 처리된다. 0은 1월을 의미한다. 11은 12월을 의미한다.
+        // 날짜 파트에 범위가 초과되면, 캐리(carry)가 발생한다.
+        let worldcup = new Date(2002, 4, 31);
+        let theMonth = worldcup.getMonth();
+        let theDate = worldcup.getDate();
+        let theDay = worldcup.getDay();
+
+        document.write("<h1>월드컵 날짜 정보</h1>");
+        document.write("2002년 월드컵 몇 월 : " + (theMonth+1) + "<br>"); // 현재 월 - 1
+        document.write("2002년 월드컵 몇 일 : " + theDate + "<br>");
+        document.write("2002년 월드컵 몇 요일 : " + theDay + "<br>"); // 일요일 ~ 토요일 (0~6)
+        document.write("전체 날짜 및 시간 : " + worldcup);
+        /*
+        // 나의 생일을 지정해서 출력하기
+        let birthday = new Date(1998, 6, 7);
+        let birtMon = birthday.getMonth();
+        let birtDate = birthday.getDate();
+        let birtDay = birthday.getDay();
+
+        document.write("<h1>나의 생일 정보</h1>");
+        document.write("나의 생일 몇 월 : " + (birtMon + 1) + "<br>"); // 현재 월 - 1
+        document.write("나의 생일 몇 일 : " + birtDate + "<br>");
+        document.write("나의 생일 몇 요일 : " + birtDay + "<br>"); // 일요일 ~ 토요일 (0~6)
+        */
+    </script>
+
+</body>
+</html>

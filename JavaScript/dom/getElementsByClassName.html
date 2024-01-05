@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h3>document.getElementsByClassName() 메서드</h3>
+
+    <p class = "intro">HTML5</p>
+    <p class = "intro">CSS3</p>
+    <p>JavaScript</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const elements = document.getElementsByClassName("intro"); // getElementsByClassName("클래스 이름") -> 10, 11줄의 p태그 참조
+        document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + elements[0].innerHTML; //elements[0] -> HTML / elements[1] -> CSS3 
+    </script>
+
+</body>
+</html>

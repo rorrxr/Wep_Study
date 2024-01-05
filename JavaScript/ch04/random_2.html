@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 : Math.random </title>
+</head>
+<body>
+    <h3> 랜덤 : Math.random() </h3>
+    <p>0~100 범위의 숫자를 랜덤으로 출력하기</p>
+    <p id = "demo"></p>
+    <script>
+        //document.getElementById("demo").innerHTML = Math.random(); // getElementByID = p태그에 참조.innerHTML = HTML에 넣고 = p태그에 랜덤값을 대입
+
+        // Math.random() : 0.0 <= x < 1.0
+        // 0.0 <= x < 10.0
+        // Math.floor(x)
+        document.getElementById("demo").innerHTML = Math.floor(Math.random() * 101); // getElementByID = p태그에 참조.innerHTML = HTML에 넣고 = p태그에 랜덤값을 대입
+        
+    </script>
+</body>
+</html>

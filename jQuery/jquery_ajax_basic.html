@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The XMLHttpRequest Object</h2>
+
+<div id="demo">
+<p>Let AJAX change this text.</p>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    //xhttp객체 서버에게 요청을 하여, 정상적으로 응답을 받아오면, 아래 코드가 실행된다.
+
+    xhttp.onload = function() {
+        document.getElementById("demo").innerHTML = this.responseText;
+    }
+    //xhttp.open("GET", "서버측의 파일명 또는 매핑주소");
+    xhttp.open("GET", "ajax_info.txt");
+    xhttp.send(); //실질적으로 서버에 요청하는 기능.
+}
+</script>
+
+</body>
+</html>

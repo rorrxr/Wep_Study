@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열(Array)</title>
+</head>
+<body>
+    <h3>배열(Array)</h3>
+    <p>배열은 동일한 목적의 여러개의 기억장소를 하나의 대표하는 이름으로 관리하는 형태</p>
+    <script>
+        // 배열 생성 방법 1
+        /*
+        let d = new Array();
+        d[0] = 30;
+        d[1] = "따르릉";
+        d[2] = true;
+
+        // 배열 생성 방법 2
+        let d = new Array(30, "따르릉", true);
+
+        // 배열 생성 방법 3, 권장 방법
+        let d = [30, "따르릉", true];
+        */
+
+        let arr = [30, "따르릉", true, 30, "따르릉", true]; // 데이터의 형식이 달라도 배열이 가능하다.
+
+        document.write("<h3>배열값 읽어오기 - 1</h3>");
+        document.write(arr[0], "<br>"); // 30
+        document.write(arr[1], "<br>"); // 따르릉
+        document.write(arr[2], "<br>"); // true
+        document.write(arr[3], "<br>"); // 30
+        document.write(arr[4], "<br>"); // 따르릉
+        document.write(arr[5], "<br>"); // true
+
+
+        document.write("<h3>배열값 읽어오기 - 2</h3>");
+        for (let i = 0; i < arr.length; i++){
+            document.write(arr[i], "<br>");
+        }
+
+        document.write("<h3>배열값 읽어오기 - 3</h3>");
+        for (i in arr){
+            document.write(arr[i], "<br>");
+        }
+    </script>
+</body>
+</html>

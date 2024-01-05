@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while문</title>
+    <style>
+        *{
+            margin : 0;
+        }
+
+        .blue{
+            color : blue;
+        }
+
+        .red{
+            color : red;
+        }
+    </style>
+</head>
+<body>
+    <p>내림차순으로 10~20 범위의 숫자 중 짝수는 파랑색으로 출력, 홀수는 빨강색으로 출력</p><br>
+    <script>
+        let i = 20;
+
+        while(i >= 10){
+            if(i % 2 == 0){
+                document.write("<p class = 'blue'>" + i + "</p>"); // 짝수
+            }else{
+                document.write("<p class = 'red'>" + i + "</p>"); // 홀수
+            }
+            i--;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>이벤트 리스너를 이용</title>
+</head>
+<body>
+
+<h2>이벤트리스너 사용</h2>
+
+<p>현재 날짜와 시간 </p>
+<p id = "result"></p>
+<button type = "button" id = "btn_timeinfo1">현재 날짜/시간확인 1 - 일반 함수 사용</button>
+<button type = "button" id = "btn_timeinfo2">현재 날짜/시간확인 2 - 익명 함수 사용</button>
+
+<script>
+    // 일반 함수 사용
+    // 여러개의 함수를 이벤트를 통하여 사용이 가능
+    document.getElementById("btn_timeinfo1").addEventListener("click", displayDate);
+    document.getElementById("btn_timeinfo1").addEventListener("click", myMessage);
+
+    function displayDate(){
+        document.getElementById("result").innerHTML = Date();
+    }
+
+    function myMessage(){
+        alert("현재 날짜 및 시간 정보입니다.");
+    }
+
+    // 익명 함수 사용
+    document.getElementById("btn_timeinfo2").addEventListener("click", function(){
+        document.getElementById("result").innerHTML = Date();
+    });
+
+
+</script>
+
+</body>
+</html> 

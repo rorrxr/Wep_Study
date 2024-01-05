@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            console.log($("#spring").text("<b>스프링</b>")); //태그 효과 적용 안됨
+            console.log($("#java").html("<b>자바</b>")); // 태그 효과 적용됨
+            console.log($("#test").val("테스트"));
+
+            /*
+                $("#btn_info1").click(function(){
+                    $("#spring").text("스프링");
+                });
+                $("#btn_info2").click(function(){
+                    $("#java").text("자바");
+                });
+            */
+        });
+    </script>
+</head>
+<body>
+    <h3>Set Content : text(), html(), val() 메서드 사용</h3>
+    <p id = "spring"><b>Spring</b></p>
+    <p id = "java"><b>Java</b></p>
+    <input type = "text" id = "test" value=""test><br>
+    <button id = "btn_info1">Spring 내용 변경하기</button>
+    <button id = "btn_info2">Java 내용 변경하기</button>
+</body>
+</html>

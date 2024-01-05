@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn_info").click(function(){
+                console.log($("#html5").text()); // $("선택자").text() : 선택자가 폼양식태그 (input, select, textarea)를 제외한 태그, text를 가져온다
+                console.log($("#css3").html()); // $("선택자").html() : 선택자가 폼양식태그 (input, select, textarea)를 제외한 태그, CSS 가져오기
+                console.log($("#test").val()); // $("선택자").val() : 선택자가 input, select, textarea 태그에서만 지원
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>Get Content : text(), html(), val() 메서드 사용</h3>
+    <p id = "html5"><b>HTML5</b></p>
+    <p id = "css3"><b>CSS3</b></p>
+    <input type = "text" id = "test"><br>
+    <button id = "btn_info">내용 읽어오기</button>
+</body>
+</html>

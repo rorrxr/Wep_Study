@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 정의 객체</title>
+</head>
+<body>
+    <h3>사용자 정의 객체 정의 및 사용</h3>
+
+    <script>
+        // 시나리오
+        // 개인정보
+
+        /*
+            속성
+
+            이름 : 홍길동
+            나이 : 100
+            국적 : 대한민국
+
+            메서드
+
+            정보 : 이름은 홍길동이고 나이는 100세, 국적은 대한민국입니다.
+
+            이름 : 홍길동 -> 홍길도
+            나이 : 100 -> 101세
+            
+        */
+
+        var human = {
+            name: "홍길동",
+            age: 100,
+            country:"대한민국",
+            info: function(){
+                document.write("정보 : 이름은 " + this.name + "이고 나이는 " + this.age + "세, 국적은 " + this.country + "입니다. <br>");
+            }
+        }
+        //document.write("<h1>tv 객체 메서드 호출</h1>");
+        human.info(); // tv info 메소드 호출
+        
+        document.write("이름 : " + human.name + "->");
+        human.name = "홍길도";
+        document.write(human.name + "<br>");
+
+        document.write("나이 : " + human.age + "->");
+        human.age = "101";
+        document.write(human.age + "세<br>");
+
+        human.info();
+    </script>
+</body>
+</html>

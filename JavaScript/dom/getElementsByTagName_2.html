@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML DOM</h2>
+
+<div id="main">
+<p>Finding HTML Elements by Tag Name</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method.</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+const x = document.getElementById("main"); // 7줄 div 태그 참조
+const y = x.getElementsByTagName("p"); //8-9 p 태그 참고
+
+document.getElementById("demo").innerHTML = 
+'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+
+//document.getElementById("main").innerHTML =  'The first paragraph (index 0) inside "main" is: ' + x[0].innerHTML;
+</script>
+
+</body>
+</html>

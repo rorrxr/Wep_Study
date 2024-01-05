@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택문 : switch</title>
+</head>
+<body>
+    <h3>선택문 : switch</h3>
+
+    <script>
+        let site = prompt("즐겨찾는 포털사이트 입력 (네이버, 다음, 네이트, 구글) : ", "");
+
+        let url; // 변수의 초기값은 undefined
+
+        // break; 문을 생략하면, 아래 case 구문이 동작된다.
+        // break; 문을 사용하면, switch문을 탈출한다.
+        switch(site){
+            case "네이버":
+                url = "www.naver.com";
+                break;
+            
+            case "다음":
+                url = "www.daum.net";
+                break;
+            
+            case "네이트":
+                url = "www.nate.com";
+                break;
+            
+            case "구글":
+                url = "www.goolge.com";
+                break;
+            
+            default:
+                url = "";
+        }
+
+        if(url){
+            // 주소이동 명령어
+            // location.href = "이동 주소";
+            location.href = "http://" + url;
+        }else{
+            alert("일치하는 주소가 없습니다. 정확히 입력해주세요.");
+            location.reload();
+        }
+    </script>
+</body>
+</html>

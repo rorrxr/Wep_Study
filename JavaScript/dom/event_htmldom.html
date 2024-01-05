@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트를 html dom으로 사용</title>
+</head>
+<body>
+    <p>현재 날짜와 시간 </p>
+    <p id = "result"></p>
+    <button type = "button" id = "btn_timeinfo">현재 날짜/시간확인</button>
+
+    <script>
+        // 이벤트 설정
+        document.getElementById("btn_timeinfo").onclick = displayDate;
+
+        function displayDate(){
+            document.getElementById("result").innerHTML = Date();
+        }
+    </script>
+</body>
+</html>
