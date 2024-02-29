@@ -1,2 +1,2 @@
 # ezno_backup
-깃 학습용 및 백업용
+HTML, JavaScript 공부 기록
